@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mahasiswa;
 use Illuminate\Http\Request;
+use Alert;
 
 class MahasiswaController extends Controller
 {
@@ -26,6 +27,7 @@ class MahasiswaController extends Controller
             'telepon' => request('telepon'),
             'gender' => request('gender')
         ]));
+        alert()->success('Success','Data berhasil Di simpan !');
         return redirect()->route('mahasiswa');
     }
 
@@ -37,12 +39,14 @@ class MahasiswaController extends Controller
     public function update(Request $request, $id){
         $mhs = Mahasiswa::find($id);
         $mhs->update($request->all());
+        toast('Yeah Data Berhasil Di Ubah','success');
         return redirect()->route('mahasiswa');
     }
 
     public function destroy($id){
         $mhs = Mahasiswa::find($id);
         $mhs->delete();
+        toast('Data Berhasil DI hapus :)','success');
         return redirect()->route('mahasiswa');
     }
 }
