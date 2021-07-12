@@ -30,3 +30,21 @@ Route::post('simpan-mahasiswa', 'MahasiswaController@store')->name('simpan.mahas
 Route::get('edit-mahasiswa/{id}','MahasiswaController@edit')->name('edit.mahasiswa');
 Route::post('update-mahasiswa/{id}', 'MahasiswaController@update')->name('mahasiswa.update');
 Route::get('hapus-mahasiswa/{id}', 'MahasiswaController@destroy')->name('hapus.mahasiswa');
+
+// matkul
+Route::get('makul', 'MakulController@index')->name('makul');
+Route::get('tambah-makul', 'MakulController@create')->name('tambah.makul');
+Route::post('simpan-makul', 'MakulController@store')->name('simpan.makul');
+
+Route::get('edit-makul/{id}', 'MakulController@edit')->name('edit.makul');
+Route::post('update-makul/{id}', 'MakulController@update')->name('update.makul');
+Route::get('hapus-makul/{id}', 'MakulController@destroy')->name('hapus.makul');
+
+//nilai
+Route::get('nilai', 'NilaiController@index')->name('nilai');
+Route::get('tambah-nilai', 'NilaiController@create')->name('tambah.nilai');
+Route::post('simpan-nilai', 'NilaiController@store')->name('simpan.nilai');
+
+Route::get('edit-nilai/{id}', 'NilaiController@edit')->name('edit.nilai');
+Route::post('update-nilai/{id}', 'NilaiController@update')->name('update.nilai');
+Route::get('hapus-nilai/{id}', 'NilaiController@destroy')->name('hapus.nilai');

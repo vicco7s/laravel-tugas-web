@@ -12,10 +12,15 @@
                         @csrf
                         <div class="form grub">
                             <div class="form col">
-                                <!-- <div class="row">
-                                    <label for="name">Nama</label>
-                                    <input type="text" name="name" class="form-control" placeholder="Tambahkan nama"> 
-                                </div> -->
+                            <div class="row">
+                            <label for="name">Nama Mahasiswa</label>
+                                    <select name="user_id" id="user_id" class="form-control">
+                                        <option value="" disabled selected>--pilih User--</option>
+                                        @foreach ($user as $u)
+                                            <option value="{{ $u->id}}"{{$mhs->user_id == $u->id ? 'selected': ''}}>{{$u->name}}</option>
+                                        @endforeach
+                                    </select>
+                            </div>
                                 <div class="row">
                                     <label for="npm">Npm</label>
                                     <input type="number" name="npm" class="form-control" placeholder="Tambahkan npm" value="{{$mhs->npm}}"> 
@@ -40,9 +45,9 @@
                                     <label for="gender">gender</label>
                                     <br>
                                     <select class="form-control" name="gender" id="gender">
-                                        <option value="{{is_null($mhs) ? '' : $mhs->gender}}">{{is_null($mhs) ? '' : $mhs->gender}}</option>
-                                        <option value="L">L</option>
-                                        <option value="P">P</option>
+                                        <option value="" disabled selected>--pilih jenis kelamin--</option>
+                                        <option value="L"{{ $mhs->gender == 'L' ? 'selected' : ''}}>Laki Laki</option>
+                                        <option value="P"{{ $mhs->gender == 'P' ? 'selected' : ''}}>Perempuan</option>
                                     </select>
                                 </div>
                                 <br>

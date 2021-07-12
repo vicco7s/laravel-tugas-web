@@ -13,13 +13,18 @@
 
                         <div class="form grub">
                             <div class="form col">
-                                <!-- <div class="row">
-                                    <label for="name">Nama</label>
-                                    <input type="text" name="name" class="form-control" placeholder="Tambahkan nama"> 
-                                </div> -->
+                                <div class="row">
+                                    <label for="name">Nama Mahasiswa</label>
+                                    <select name="user_id" id="user_id" class="form-control">
+                                        <option value="" disabled selected>--pilih User--</option>
+                                        @foreach ($user as $u)
+                                            <option value="{{ $u->id}}">{{$u->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
                                 <div class="row">
                                     <label for="npm">Npm</label>
-                                    <input type="number" name="npm" class="form-control" placeholder="Tambahkan npm"> 
+                                    <input type="number" name="npm" class="form-control" placeholder="Tambahkan npm" maxlength="5"> 
                                 </div>
                                 <div class="row">
                                     <label for="tanggal">tanggal Lahir</label>
@@ -41,9 +46,9 @@
                                     <label for="gender">gender</label>
                                     <br>
                                     <select class="form-control" name="gender" id="gender">
-                                        <option value="">Select menu</option>
-                                        <option value="L">L</option>
-                                        <option value="P">P</option>
+                                        <option value="" disabled selected>Select menu</option>
+                                        <option value="L">Laki laki</option>
+                                        <option value="P">Perempuan</option>
                                     </select>
                                 </div>
                                 <br>
