@@ -8,7 +8,7 @@
                 <div class="card-header">Tambah Nilai</div>
 
                 <div class="card-body">
-                    <form action="{{route('simpan.nilai')}}" method="post">
+                    <form action="{{route('update.nilai',$nilai->id)}}" method="post">
                         @csrf
 
                         <div class="form grub">

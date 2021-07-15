@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Data Nilai
-                    <a href="{{route('tambah.nilai')}}" class="btn btn-primary btn-md float-right">Tambah Data</a>
+                    <a href="{{route('tambah.nilai')}}" class="btn btn-primary btn-md float-right">Tambah Nilai</a>
                 </div>
 
                 <div class="card-body">

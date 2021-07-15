@@ -35,6 +35,7 @@ class NilaiController extends Controller
     
     public function update(Request $request, $id){
         $nilai = Nilai::find($id);
+        
         $nilai->update($request->all());
         toast('Yeah Data Berhasil Di Ubah','success');
         return redirect()->route('nilai');

@@ -40,7 +40,7 @@
                             <a class="nav-link" href="{{ route('makul')}}">Mata Kuliah</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Nilai</a>
+                            <a class="nav-link" href="{{ route('nilai')}}">Nilai</a>
                         </li>
                     </ul>
 
